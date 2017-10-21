@@ -33,7 +33,7 @@ class Image extends Component {
                     const img = team.crestUrl;
                     const name = team.name;
                     return (
-                            <img className="image" key={key} src="http://upload.wikimedia.org/wikipedia/en/6/63/Leicester02.png"/>
+                            <img className="image" key={key} src={img}/>
                     )
                 })}
             </Carousel>

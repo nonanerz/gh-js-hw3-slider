@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Carousel from 'nuka-carousel';
 
 
-class Image extends Component {
+class Slider extends Component {
     constructor(props) {
         super(props);
         this.request();
@@ -33,7 +33,10 @@ class Image extends Component {
                     const img = team.crestUrl;
                     const name = team.name;
                     return (
-                            <img className="image" key={key} src={img}/>
+                        <div className="content">
+                            <p className="team-name">{name}</p>
+                            <img alt={name} className="image" key={key} src={img}/>
+                        </div>
                     )
                 })}
             </Carousel>
@@ -41,4 +44,4 @@ class Image extends Component {
     }
 }
 
-export default Image;
+export default Slider;

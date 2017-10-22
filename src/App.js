@@ -7,17 +7,14 @@ class App extends Component {
 
     constructor(props) {
         super(props);
-        this.request(456);
+        this.request();
         this.state = {
-            value: 456,
             teams: []
         }
-
-        this.handleChange = this.handleChange.bind(this);
     }
 
-    request(id){
-        const FETCH_URL = 'http://api.football-data.org/v1/competitions/' + id +'/teams';
+    request(){
+        const FETCH_URL = 'http://api.football-data.org/v1/competitions/464/teams';
 
         fetch('https://cors-anywhere.herokuapp.com/'+ FETCH_URL, {
             method: 'GET',
@@ -30,10 +27,6 @@ class App extends Component {
                 const teams = json.teams;
                 this.setState({ teams });
             });
-    }
-
-    handleChange(event) {
-        this.setState({value: event.target.value});
     }
 
     render() {
@@ -51,16 +44,6 @@ class App extends Component {
                         )
                     })}
                 </Carousel>
-                <form onSubmit={this.request(this.state.value)}>
-                    <label>
-                        Pick a League:
-                        <select value={this.state.value} onChange={this.handleChange}>
-                            <option value="456">Serie A 2017/18</option>
-                            <option value="464">Champions League</option>
-                            <option value="457">Primeira Liga</option>
-                        </select>
-                    </label>
-                </form>
             </div>
         )
     }

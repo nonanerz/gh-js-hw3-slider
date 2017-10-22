@@ -33,9 +33,9 @@ class Slider extends Component {
                     const img = team.crestUrl;
                     const name = team.name;
                     return (
-                        <div className="content">
+                        <div key={key} className="content">
                             <p className="team-name">{name}</p>
-                            <img alt={name} className="image" key={key} src={img}/>
+                            <img alt={name} className="image" src={img}/>
                         </div>
                     )
                 })}

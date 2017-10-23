@@ -59,6 +59,10 @@ class App extends Component {
                             <option value="456">Serie A 2017/18</option>
                             <option value="464">Champions League</option>
                             <option value="457">Primeira Liga</option>
+                            <option value="446">Championship 2017/18</option>
+                            <option value="449">Eredivisie 2017/18</option>
+                            <option value="452">Bundesliga 2017/18</option>
+                            <option value="455">Primera Division 2017</option>
                         </select>
                     </label>
                 </form>
